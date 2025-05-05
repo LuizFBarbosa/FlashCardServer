@@ -11,6 +11,8 @@ COPY gradle /app/gradle
 # Copia o código-fonte
 COPY src /app/src
 
+RUN chmod +x gradlew
+
 # Compila o aplicativo
 RUN ./gradlew build -x test
 
