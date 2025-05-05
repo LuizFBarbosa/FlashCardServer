@@ -34,6 +34,6 @@ application {
 }
 jar {
     manifest {
-        attributes 'Main-Class': 'com.example.flashcardapp.ApplicationKt'
+        attributes 'Main-Class': 'com.example.flashcardapp.Application'
     }
 }
