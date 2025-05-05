@@ -36,7 +36,11 @@ application {
 tasks.jar {
     manifest {
         attributes(
-            "Main-Class" to "com.example.flashcardapp.Application"
+            "Main-Class" to "com.example.flashcardapp.ApplicationKt"
         )
     }
+    from(sourceSets.main.get().output)
+    from(sourceSets.main.get().output)
+    from(configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) })
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
