@@ -48,7 +48,7 @@ fun Application.module() {
             // Processa todos os dados do cliente
             post("/sync") {
                 val syncData = call.receive<SyncData>()
-
+                println("Recebeu dados"+ syncData.toString())
                 logger.info("Recebeu dados"+ syncData.toString())
 
                 transaction {
