@@ -32,8 +32,11 @@ application {
     // Ponto de entrada do seu servidor
     mainClass.set("com.example.flashcardapp.ApplicationKt")
 }
-jar {
+
+tasks.jar {
     manifest {
-        attributes 'Main-Class': 'com.example.flashcardapp.Application'
+        attributes(
+            "Main-Class" to "com.example.flashcardapp.Application"
+        )
     }
 }
